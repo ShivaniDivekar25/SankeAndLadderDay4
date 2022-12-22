@@ -7,11 +7,13 @@
             Console.WriteLine("Welcome! to Snake and Ladder Game");
             int position = 0;
             Random random = new Random();       //Creating object random
+            int count = 0;
              
             while(position<100)
             {
                 int Dice = random.Next(1, 7);
                 int Option = random.Next(1, 4);
+                count = count +1;
 
                 switch (Option)         //Checking for options using switch case
                 {
@@ -32,6 +34,7 @@
                         break;
                 }
             }
+            Console.WriteLine("{0} times the dice was played to win the game ", count);
         }
     }
 }
